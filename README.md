@@ -1,6 +1,23 @@
 # Drowsiness Detection System
 
-  The scope of the project is to detect the early symptoms of drowsiness before the driver has lost all attention and warns them that they are no longer capable of driving and need to take some rest. Initial signs of fatigue are often detectable before a critical situation arises and so, detection and indication of driver fatigue are ongoing topics of our research. Behavioral factors are usually used to detect drowsiness, using the camera the live feed of drivers can be noted and it indicates whether his condition is suitable for taking the journey. Using image processing techniques, this project is to reduce driving accidents by focusing on the driver's face and eyes. By analyzing the eye region, the model detects when the driver's eye opens or closes. Our algorithm detects drivers' faces and eyes after which we track and analyze them. The system sounds the alarm if the eyes are closed for consecutive frames.Furthermore, the system can detect when the eyes are red (due to lack of sleep) and display a warning message, as well as to detect yawning by reading the distance between the lips and updating the yawn count with the help of a counter.
+Drowsiness Detection System built with OpenCV and Machine Learning concepts in order to detect drowsiness in real-time video streams.
 
-# Process involved in this project:
-  In this system, we propose to implement a camera that captures real-time frames from the video. By extracting the features, the software detects the face as well as facial landmarks using two methods, a haar cascade method using edge or line detection for detecting the face and eyes as well as a pre-trained facial landmark detector(shape_predictor_68_face_landmarks.dat), which helps for detecting the facial features of the individual. After detection, it monitors the driver's eye, to check whether he closed his eyes or not. Suppose if he closes his eyes for consecutive frames it indicates him through an alarm. Also, it detects the color of the sclera while the eyes are open, if the sclera is red (due to lack of sleep) and displays a warning message, as well as it detects yawning by reading the distance between the lips and updating the yawn count with the help of a counter.
+## 📸Sample Output Images:
+  let's look at some of the sample images where the system detects the drowsiness `img-1 represents eyes open` and `img-2 represents eyes closed`.
+
+<img src="https://github.com/Dinesh-Manoharan/Drowsiness_Detection_System/assets/92298181/506b9bb2-3ee4-4473-afc9-59ce7504b94b" width = 250, height = 250> . 
+<img src="https://github.com/Dinesh-Manoharan/Drowsiness_Detection_System/assets/92298181/a9846175-217a-465c-a001-a699829445d2" width = 250, height = 250> 
+
+
+## Objective:
+  The project aims to proactively identify early signs of driver drowsiness to prevent accidents caused by fatigue. Utilizing live camera feeds, behavioral cues are analyzed, focusing on the driver's face and eyes using image processing techniques. The algorithm tracks and analyzes eye movements, triggering an alarm if closed eyes persist in consecutive frames. The system also monitors yawning through lip distance, updating a yawn count. The overall goal is to enhance road safety by providing timely alerts to drivers exhibiting signs of drowsiness.
+
+## Process involved in this project:
+  This system utilizes a real-time video feed captured by a camera. Through feature extraction, facial detection employs both a haar cascade method for face and eye detection and a pre-trained facial landmark detector (shape_predictor_68_face_landmarks.dat) for detailed facial features. The software monitors the driver's eyes, triggering an alarm if closed for consecutive frames. Yawning is detected by measuring lip distance, updating a yawn count with a counter.
+
+## TechStack used:
+* Python
+* OpenCV
+* dlib
+* numpy
+* pygame
